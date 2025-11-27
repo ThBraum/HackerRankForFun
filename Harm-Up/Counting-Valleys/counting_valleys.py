@@ -11,12 +11,13 @@ import os
 #  2. STRING path
 #
 
+
 def countingValleys(steps, path):
     altitude = 0
     valleys = 0
 
     for c in path:
-        if c == 'U':
+        if c == "U":
             altitude += 1
             if altitude == 0:
                 valleys += 1
@@ -25,8 +26,9 @@ def countingValleys(steps, path):
 
     return valleys
 
-if __name__ == '__main__':
-    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+if __name__ == "__main__":
+    fptr = open(os.environ["OUTPUT_PATH"], "w")
 
     steps = int(input().strip())
 
@@ -34,6 +36,6 @@ if __name__ == '__main__':
 
     result = countingValleys(steps, path)
 
-    fptr.write(str(result) + '\n')
+    fptr.write(str(result) + "\n")
 
     fptr.close()
